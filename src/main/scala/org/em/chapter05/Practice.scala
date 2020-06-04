@@ -15,8 +15,10 @@ object Practice extends App {
     if (as.isEmpty) empty
     else cons(as.head, apply(as.tail: _*))
 
-  Stream(1,2,3,4,5,6).toList
+  Stream(1, 2, 3, 4, 5, 6).toList
 
   println(Stream(1, 2, 3, 4, 5, 6).take(3).toList)
+
+  println(Stream(1, 2, 3, 4, 5, 6).exists(a => a == 3))
 
 }
