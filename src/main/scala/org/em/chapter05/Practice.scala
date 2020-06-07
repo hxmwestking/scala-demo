@@ -21,4 +21,14 @@ object Practice extends App {
 
   println(Stream(1, 2, 3, 4, 5, 6).exists(a => a == 3))
 
+  println("========================")
+
+  private val value: Stream[Int] = Stream.unfold((0, 1)) {
+    case (f0, f1) => Some(f0, (f1, f0 + f1))
+  }
+
+  println("========================")
+
+  println(value.take(5).toList)
+
 }
